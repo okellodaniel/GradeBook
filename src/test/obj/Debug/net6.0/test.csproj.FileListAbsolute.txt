@@ -97,3 +97,9 @@ C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\o
 C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\obj\Debug\net6.0\test.pdb
 C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\obj\Debug\net6.0\test.genruntimeconfig.cache
 C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\obj\Debug\net6.0\ref\test.dll
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\bin\Debug\net6.0\gradebook.deps.json
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\bin\Debug\net6.0\gradebook.runtimeconfig.json
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\bin\Debug\net6.0\gradebook.exe
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\bin\Debug\net6.0\gradebook.dll
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\test\bin\Debug\net6.0\gradebook.pdb

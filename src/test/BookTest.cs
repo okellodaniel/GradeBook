@@ -17,7 +17,10 @@ public class BookTest
         // Act
         var result = book.GetStatistics();
 
-        // Assert        
+        // Assert      
+        Assert.Equal(23, result.Low);
+        Assert.Equal(89, result.High);
+        Assert.Equal(45, result.Average);  
 
     }   
 }
