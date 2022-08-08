@@ -1,0 +1,15 @@
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\bin\Debug\net6.0\gradebook.exe
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\bin\Debug\net6.0\gradebook.deps.json
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\bin\Debug\net6.0\gradebook.runtimeconfig.json
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\bin\Debug\net6.0\gradebook.dll
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\bin\Debug\net6.0\gradebook.pdb
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.AssemblyInfo.cs
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.dll
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\refint\gradebook.dll
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.pdb
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\gradebook.genruntimeconfig.cache
+C:\Users\User\Documents\Laboremus\Developer\Projects\Novice\GradeBook\src\gradebook\obj\Debug\net6.0\ref\gradebook.dll
