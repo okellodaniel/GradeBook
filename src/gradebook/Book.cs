@@ -12,7 +12,7 @@ namespace gradebook
         public Book(string name)
         {
             grades = new List<double>();
-            name = name;
+            this.Name = name;
         }
 
         public Statistics GetStatistics()

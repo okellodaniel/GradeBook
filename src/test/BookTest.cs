@@ -20,7 +20,7 @@ public class BookTest
         // Assert      
         Assert.Equal(23, result.Low);
         Assert.Equal(89, result.High);
-        Assert.Equal(45, result.Average);  
+        Assert.Equal(56, result.Average);  
 
     }   
 }
