@@ -11,7 +11,12 @@ book.AddGrade(88.5);
 book.AddGrade(99.5);
 book.AddGrade(4.1);
 
-book.ShowStatistics();
+var stats = book.GetStatistics();
+
+Console.WriteLine($"The average is { stats.Average }");
+Console.WriteLine($"The highest is { stats.High }");
+Console.WriteLine($"The lowest is { stats.Low }");
+
 
 
 
