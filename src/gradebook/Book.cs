@@ -8,9 +8,11 @@ namespace gradebook
     public class Book
     {
         public List<double> grades;
-        public Book()
+        public string Name;
+        public Book(string name)
         {
             grades = new List<double>();
+            name = name;
         }
 
         public Statistics GetStatistics()

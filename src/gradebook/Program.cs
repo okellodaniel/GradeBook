@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using gradebook;
 
-var book = new Book();
+var book = new Book("Daniels Scrript Book");
 
 book.AddGrade(77.5);
 book.AddGrade(77.5);

@@ -5,10 +5,10 @@ namespace test;
 public class BookTest
 {
     [Fact]
-    public void Test1()
+    public void BookCalculatesAnAverageGrade()
     {
         // Arrange
-        var book = new Book();
+        var book = new Book("Book A");
         book.AddGrade(23);
         book.AddGrade(45);
         book.AddGrade(67);
