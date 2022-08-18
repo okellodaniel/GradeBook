@@ -22,16 +22,34 @@ namespace gradebook
             result.High = double.MinValue;
             result.Low = double.MaxValue;
 
-            var i = 0;
-            do
-            {
+            // var i = 0;
+            // Do while loop
+            // Runs loop at least once
+            // do
+            // {
+            //     result.High = Math.Max(grades[i], result.High);
+            //     result.Low = Math.Min(grades[i], result.Low);
+            //     result.Average += grades[i];
+            //     i++;
+            // }
+            // while(i < grades.Count);
+
+            // While loop
+            // while(i < grades.Count){
+            //     result.High = Math.Max(grades[i], result.High);
+            //     result.Low = Math.Min(grades[i], result.Low);
+            //     result.Average += grades[i];
+            //     i++;    
+            // }
+
+            // For loop
+
+            for(var i =0; i < grades.Count; i++){
                 result.High = Math.Max(grades[i], result.High);
                 result.Low = Math.Min(grades[i], result.Low);
                 result.Average += grades[i];
-                i++;
             }
-            while(i < grades.Count);
-
+               
             result.Average /= grades.Count;
             return result;
         }
