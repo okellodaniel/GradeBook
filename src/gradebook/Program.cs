@@ -16,6 +16,7 @@ var stats = book.GetStatistics();
 Console.WriteLine($"The average is { stats.Average }");
 Console.WriteLine($"The highest is { stats.High }");
 Console.WriteLine($"The lowest is { stats.Low }");
+Console.WriteLine($"The letter grade is { stats.Letter }");
 
 
 
