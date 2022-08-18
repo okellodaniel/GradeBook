@@ -23,4 +23,5 @@ public class BookTest
         Assert.Equal(56, result.Average);  
 
     }   
+
 }

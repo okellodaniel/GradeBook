@@ -110,6 +110,14 @@ public class TypeTest
     [Fact]
     public void StringsBehaveLikeValueTypes()
     {
-        
+        string name = "Daniel";
+        name = MakeUpperCase(name);
+
+        Assert.Equal("DANIEL", name);
+    }
+
+    private string MakeUpperCase(string P)
+    {
+        return P.ToUpper();
     }
 }
