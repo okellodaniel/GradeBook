@@ -7,14 +7,39 @@ namespace gradebook
 {
     public class Book
     {
+        // A readonly field is a field that can only be set in the constructor
+        public readonly string Category = "Book Lau";
+
+        // Constant
+        public const string CATEGORY = "Book Lau";
+
         public List<double> grades;
-        public string Name;
+        public string name;
+        public string Name{
+            get{
+                return name;
+            }
+            set{
+                if(!String.IsNullOrEmpty(value)){
+                    name = value;
+                }
+                else{
+                    throw new Exception("Name cannot be empty");
+                }
+            }
+        }
         public Book(string name)
         {
             grades = new List<double>();
-            this.Name = name;
+            Name = name;
         }
-
+        // Contructor overloads allow you to create multiple constructors with different parameters
+        // public Book(string name, string category)
+        // {
+        //     grades = new List<double>();
+        //     Name = name;
+        //     Category = category;
+        // }
         public Statistics GetStatistics()
         {
             var result = new Statistics();
@@ -76,7 +101,7 @@ namespace gradebook
                 case var d when d >=70.0:
                     result.Letter = 'C';
                     break;
-                case var d when d >=60.0:
+                case var d when d >=40.0 && d <= 69.9:
                     result.Letter = 'D';
                     break;
                 default:
@@ -88,7 +113,8 @@ namespace gradebook
             return result;
         }
 
-        public void AddLetterGrade(char letter){
+        // Method overloading
+        public void AddGrade(char letter){
             switch(letter){
                 case 'A':
                     AddGrade(90);
@@ -105,6 +131,7 @@ namespace gradebook
             }
         }
 
+       
         public void AddGrade(double grade)
         {
             if (grade <= 100 && grade >=0)
