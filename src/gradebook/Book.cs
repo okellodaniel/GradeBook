@@ -14,20 +14,19 @@ namespace gradebook
         public const string CATEGORY = "Book Lau";
 
         public List<double> grades;
-        public string name;
+
         public string Name{
-            get{
-                return name;
-            }
-            set{
-                if(!String.IsNullOrEmpty(value)){
-                    name = value;
-                }
-                else{
-                    throw new Exception("Name cannot be empty");
-                }
-            }
+            get;
+            set;
         }
+
+        // delegate
+
+        public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+        public event GradeAddedDelegate GradeAdded;
+
+
         public Book(string name)
         {
             grades = new List<double>();
@@ -137,6 +136,10 @@ namespace gradebook
             if (grade <= 100 && grade >=0)
             {
                 grades.Add(grade);
+                
+                if(GradeAdded != null){
+                    GradeAdded(this,new EventArgs());
+                }
             }
             else
             {

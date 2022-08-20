@@ -5,6 +5,11 @@ using gradebook;
 
 var book = new Book("Daniels Script Book");
 
+// Handling the GradeAdded event
+book.GradeAdded += OnGradeAdded;
+book.GradeAdded += OnGradeAdded;
+book.GradeAdded -= OnGradeAdded;
+
 try{
 
     while (true){
@@ -46,6 +51,9 @@ Console.WriteLine($"The Constant category is { Book.CATEGORY }");
 Console.WriteLine($"The readonly category is { book.Category }");
 
 
-
+static void OnGradeAdded(object sender, EventArgs e)
+{
+    Console.WriteLine("A grade was added");
+}
 
 
