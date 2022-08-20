@@ -10,29 +10,7 @@ book.GradeAdded += OnGradeAdded;
 book.GradeAdded += OnGradeAdded;
 book.GradeAdded -= OnGradeAdded;
 
-try{
-
-    while (true){
-        Console.WriteLine("Enter a grade or q to quit");
-        var input = Console.ReadLine();
-        if(input == "q"){
-            break;
-        }
-        else{
-            var grade = double.Parse(input);
-            book.AddGrade(grade);
-            book.AddGrade('A');
-        }
-    }
-}
-catch(Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
-finally
-{
-    Console.WriteLine("** Processing complete **");
-}
+NewMethod(book);
 
 book.AddGrade(77.5);
 book.AddGrade(77.5);
@@ -56,4 +34,33 @@ static void OnGradeAdded(object sender, EventArgs e)
     Console.WriteLine("A grade was added");
 }
 
+static void NewMethod(Book book)
+{
+    try
+    {
 
+        while (true)
+        {
+            Console.WriteLine("Enter a grade or q to quit");
+            var input = Console.ReadLine();
+            if (input == "q")
+            {
+                break;
+            }
+            else
+            {
+                var grade = double.Parse(input);
+                book.AddGrade(grade);
+                book.AddGrade('A');
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    finally
+    {
+        Console.WriteLine("** Processing complete **");
+    }
+}

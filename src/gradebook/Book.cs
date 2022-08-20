@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace gradebook
 {
-    public class Book
+    public class Book : NameObject
     {
         // A readonly field is a field that can only be set in the constructor
         public readonly string Category = "Book Lau";
@@ -15,23 +15,19 @@ namespace gradebook
 
         public List<double> grades;
 
-        public string Name{
-            get;
-            set;
-        }
-
         // delegate
 
         public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
         public event GradeAddedDelegate GradeAdded;
 
-
-        public Book(string name)
+        // Constructor chaining - the first constructor is called first
+        public Book(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
         }
+
         // Contructor overloads allow you to create multiple constructors with different parameters
         // public Book(string name, string category)
         // {
@@ -136,7 +132,7 @@ namespace gradebook
             if (grade <= 100 && grade >=0)
             {
                 grades.Add(grade);
-                
+
                 if(GradeAdded != null){
                     GradeAdded(this,new EventArgs());
                 }
