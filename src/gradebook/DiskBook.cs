@@ -5,23 +5,21 @@ using System.Threading.Tasks;
 
 namespace gradebook
 {
-    public class DiskBook : IBook
+    public class DiskBook : Book
     {
-        public DiskBook(string name)
+        public DiskBook(string name) : base(name)
         {
             Name = name;
         }
 
-        public string Name {get;set;}
+        public override event InMemoryBook.GradeAddedDelegate GradeAdded;
 
-        public event InMemoryBook.GradeAddedDelegate GradeAdded;
-
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
             throw new NotImplementedException();
         }
 
-        public Statistics GetStatistics()
+        public override Statistics GetStatistics()
         {
             throw new NotImplementedException();
         }
