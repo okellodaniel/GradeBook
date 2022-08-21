@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace gradebook
 {
-    public class Book : NameObject
+    public class InMemoryBook : Book
     {
         // A readonly field is a field that can only be set in the constructor
         public readonly string Category = "Book Lau";
@@ -22,7 +22,7 @@ namespace gradebook
         public event GradeAddedDelegate GradeAdded;
 
         // Constructor chaining - the first constructor is called first
-        public Book(string name) : base(name)
+        public InMemoryBook(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
@@ -108,26 +108,26 @@ namespace gradebook
             return result;
         }
 
-        // Method overloading
-        public void AddGrade(char letter){
-            switch(letter){
-                case 'A':
-                    AddGrade(90);
-                    break;
-                case 'B':
-                    AddGrade(80);
-                    break;
-                case 'C':
-                    AddGrade(70);
-                    break;
-                default:
-                    AddGrade(0);
-                    break;
-            }
-        }
+        // // Method overloading
+        // public override void AddGrade(char letter){
+        //     switch(letter){
+        //         case 'A':
+        //             AddGrade(90);
+        //             break;
+        //         case 'B':
+        //             AddGrade(80);
+        //             break;
+        //         case 'C':
+        //             AddGrade(70);
+        //             break;
+        //         default:
+        //             AddGrade(0);
+        //             break;
+        //     }
+        // }
 
        
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
             if (grade <= 100 && grade >=0)
             {

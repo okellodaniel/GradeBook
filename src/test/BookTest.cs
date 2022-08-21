@@ -8,7 +8,7 @@ public class BookTest
     public void BookCalculatesAnAverageGrade()
     {
         // Arrange
-        var book = new Book("Book A");
+        var book = new InMemoryBook("Book A");
         book.AddGrade(23);
         book.AddGrade(45);
         book.AddGrade(67);

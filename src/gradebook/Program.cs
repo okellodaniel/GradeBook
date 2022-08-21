@@ -3,14 +3,14 @@
 using System.Collections.Generic;
 using gradebook;
 
-var book = new Book("Daniels Script Book");
+var book = new InMemoryBook("Daniels Script Book");
 
 // Handling the GradeAdded event
 book.GradeAdded += OnGradeAdded;
 book.GradeAdded += OnGradeAdded;
 book.GradeAdded -= OnGradeAdded;
 
-NewMethod(book);
+EnterGrades(book);
 
 book.AddGrade(77.5);
 book.AddGrade(77.5);
@@ -25,7 +25,7 @@ Console.WriteLine($"The average is { stats.Average }");
 Console.WriteLine($"The highest is { stats.High }");
 Console.WriteLine($"The lowest is { stats.Low }");
 Console.WriteLine($"The letter grade is { stats.Letter }");
-Console.WriteLine($"The Constant category is { Book.CATEGORY }");
+Console.WriteLine($"The Constant category is { InMemoryBook.CATEGORY }");
 Console.WriteLine($"The readonly category is { book.Category }");
 
 
@@ -34,7 +34,7 @@ static void OnGradeAdded(object sender, EventArgs e)
     Console.WriteLine("A grade was added");
 }
 
-static void NewMethod(Book book)
+static void EnterGrades(InMemoryBook book)
 {
     try
     {

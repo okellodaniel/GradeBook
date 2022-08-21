@@ -35,9 +35,9 @@ public class TypeTest
         Assert.Equal("New Name", book1.Name);        
     }
 
-    private void test1method(ref Book book, string name)
+    private void test1method(ref InMemoryBook book, string name)
     {
-        book = new Book(name);
+        book = new InMemoryBook(name);
     }
 
     [Fact]
@@ -49,9 +49,9 @@ public class TypeTest
         Assert.Equal("Book 1", book1.Name);        
     }
 
-    private void GetBookSetName(Book book, string name)
+    private void GetBookSetName(InMemoryBook book, string name)
     {
-        book = new Book(name);
+        book = new InMemoryBook(name);
     }
 
 
@@ -64,7 +64,7 @@ public class TypeTest
         Assert.Equal("New Name", book1.Name);        
     }
 
-    private void SetName(Book book, string name)
+    private void SetName(InMemoryBook book, string name)
     {
         book.Name = name;
     }
@@ -102,9 +102,9 @@ public class TypeTest
 
     }
 
-    Book GetBook(string name)
+    InMemoryBook GetBook(string name)
     {
-        return new Book(name);
+        return new InMemoryBook(name);
     }
 
     // Value Types
