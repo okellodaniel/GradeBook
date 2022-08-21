@@ -19,7 +19,7 @@ namespace gradebook
 
         public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-        public event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate GradeAdded;
 
         // Constructor chaining - the first constructor is called first
         public InMemoryBook(string name) : base(name)
@@ -35,7 +35,7 @@ namespace gradebook
         //     Name = name;
         //     Category = category;
         // }
-        public Statistics GetStatistics()
+        public override Statistics GetStatistics()
         {
             var result = new Statistics();
             result.Average = 0.0;
