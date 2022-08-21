@@ -35,12 +35,10 @@ namespace gradebook
         //     Name = name;
         //     Category = category;
         // }
-        public override Statistics GetStatistics()
+        public  GetStatistics GetStatistics()
         {
-            var result = new Statistics();
-            result.Average = 0.0;
-            result.High = double.MinValue;
-            result.Low = double.MaxValue;
+            var result = new GetStatistics();
+            
 
             // var i = 0;
             // Do while loop
@@ -64,7 +62,9 @@ namespace gradebook
 
             // For loop
 
-            for(var i =0; i < grades.Count; i++){
+            for(var i=0; i < grades.Count; i++){
+                
+                result.Add(grades[i]);
 
                 // if(grades[i] == 42.1){
                 //     // Break statement - breaks out of loop
@@ -80,28 +80,7 @@ namespace gradebook
                 //     // Goto statement - jumps to a label
                 //     goto done;
                 // }
-                result.High = Math.Max(grades[i], result.High);
-                result.Low = Math.Min(grades[i], result.Low);
-                result.Average += grades[i];
-            }
-            result.Average /= grades.Count;
-
-            switch(result.Average){
-                case var d when d >=90.0:
-                    result.Letter = 'A';
-                    break;
-                case var d when d >=80.0:
-                    result.Letter = 'B';
-                    break;
-                case var d when d >=70.0:
-                    result.Letter = 'C';
-                    break;
-                case var d when d >=40.0 && d <= 69.9:
-                    result.Letter = 'D';
-                    break;
-                default:
-                    result.Letter = 'F';
-                    break;
+                
             }
 
             // done:

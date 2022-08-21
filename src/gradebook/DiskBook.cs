@@ -16,12 +16,21 @@ namespace gradebook
 
         public override void AddGrade(double grade)
         {
-            throw new NotImplementedException();
+            // Wrapping an IDisposable in a using statement
+            // This helps in automatically disposing of the object when the block is exited
+
+            using(var writer = File.AppendText("grades.txt")){
+                writer.WriteLine($"{Name} {grade}");
+                if(GradeAdded != null){
+                    GradeAdded(this, new EventArgs());
+                }
+            }            
+
         }
 
         public override Statistics GetStatistics()
         {
-            throw new NotImplementedException();
+            ;
         }
     }
 }
